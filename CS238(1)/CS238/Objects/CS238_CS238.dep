@@ -1,0 +1,4 @@
+Dependencies for Project 'CS238', Target 'CS238': (DO NOT MODIFY !)
+F (.\init.s)(0x5A920CDF)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\jvu05\Desktop\Assembly\CS238(1)\CS238\RTE-IC:\Keil_v5\ARM\PACK\Keil\LM4F_DFP\1.0.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 521" --pd "LM4F120 SETA 1"--list .\listings\init.lst --xref -o .\objects\init.o --depend .\objects\init.d)
+I (LM4F120H5QR.inc)(0x5A920CDF)
+F (.\HA3-main.s)(0x5A920CDF)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\jvu05\Desktop\Assembly\CS238(1)\CS238\RTE-IC:\Keil_v5\ARM\PACK\Keil\LM4F_DFP\1.0.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 521" --pd "LM4F120 SETA 1"--list .\listings\ha3-main.lst --xref -o .\objects\ha3-main.o --depend .\objects\ha3-main.d)

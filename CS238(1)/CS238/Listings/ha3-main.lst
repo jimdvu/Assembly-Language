@@ -1,0 +1,152 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; File: HA3-main.s
+    2 00000000         ;Student Name:
+    3 00000000         
+    4 00000000         
+    5 00000000         ; This file needs to be in a Keil version 5 project, tog
+                       ether with file init.s
+    6 00000000         
+    7 00000000         ; This program file is for CS 238 Home Assignment HA3
+    8 00000000         ; Later home assignments will have similar files, like H
+                       A4-main.s, HA5-main.s, etc.
+    9 00000000         
+   10 00000000                 EXPORT           main        ; this line is need
+                                                            ed to interface wit
+                                                            h init.s
+   11 00000000         
+   12 00000000                 AREA             MyCode, CODE, READONLY
+   13 00000000         
+   14 00000000                 ALIGN                        ; highly recommende
+                                                            d to start and end 
+                                                            any area with ALIGN
+                                                            
+   15 00000000         
+   16 00000000         ; Start of executable code is at following label: main
+   17 00000000         
+   18 00000000         main
+   19 00000000         
+   20 00000000 B500            PUSH             {LR}        ; save return addre
+                                                            ss of caller in ini
+                                                            t.s
+   21 00000002         
+   22 00000002         ; Single-step thru the following program in the debugger
+                       ,
+   23 00000002         ; observe the register contents after each instruction, 
+                       and
+   24 00000002         ; answer the questions asked.
+   25 00000002         
+   26 00000002         ; WRITE ALL YOUR ANSWERS IN THE HEX NOTATION, e.g. 0xA92
+                       C
+   27 00000002         ; THE FIRST LINE IS ALREADY ANSWERED AS AN EXAMPLE
+   28 00000002         
+   29 00000002 F04F 000E       MOV              R0, #14     ; R0 = 0xE
+   30 00000006         
+   31 00000006 F240 41D2       MOV              R1, #1234   ; R1 = 0x4D2
+   32 0000000A         
+   33 0000000A EB01 0200       ADD              R2, R1, R0  ; R2 = ???, R1 = ??
+                                                            ?, R0 = ???
+   34 0000000E         
+   35 0000000E 00000005 
+                       Five    EQU              5
+   36 0000000E         
+   37 0000000E 4B09            LDR              R3, =Data1
+   38 00000010 681B            LDR              R3, [R3]    ; R3 = ???
+   39 00000012         
+   40 00000012 F103 0305       ADD              R3, #Five   ; R3 = ???
+   41 00000016         
+   42 00000016 F04F 34FF       MOV              R4, #-1     ; R4 = ???
+   43 0000001A         
+   44 0000001A EB03 0504       ADD              R5, R3, R4  ; R5 = ???
+   45 0000001E         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   46 0000001E 4806            LDR              R0, =Data1 + 8 ; R0 = ???
+   47 00000020         
+   48 00000020 6806            LDR              R6, [R0]    ; R6 = ???
+   49 00000022         
+   50 00000022 6847            LDR              R7, [R0, #4] ; R7 = ???
+   51 00000024         
+   52 00000024 BD00            POP              {PC}        ; return from main 
+                                                            (our last executabl
+                                                            e instruction)
+   53 00000026         
+   54 00000026 00 00           ALIGN
+   55 00000028         
+   56 00000028         ; Data for this program (readonly for HA3):
+   57 00000028         
+   58 00000028 0000000A 
+              0000001A 
+              00000029 Data1   DCD              10, 26, 41  ; Three 32-bit word
+                                                            s, containing decim
+                                                            al values 10, 26, a
+                                                            nd 41
+   59 00000034         
+   60 00000034                 ALIGN
+   61 00000034         
+   62 00000034                 END                          ; end of source pro
+                                                            gram in this file
+              00000000 
+              00000008 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --apcs=interw
+ork --depend=.\objects\ha3-main.d -o.\objects\ha3-main.o -IC:\Users\jvu05\Deskt
+op\Assembly\CS238(1)\CS238\RTE -IC:\Keil_v5\ARM\PACK\Keil\LM4F_DFP\1.0.0\Device
+\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 521" --predefine="LM4F120 SETA 1" --list=.\listings\ha
+3-main.lst HA3-main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Data1 00000028
+
+Symbol: Data1
+   Definitions
+      At line 58 in file HA3-main.s
+   Uses
+      At line 37 in file HA3-main.s
+      At line 46 in file HA3-main.s
+
+MyCode 00000000
+
+Symbol: MyCode
+   Definitions
+      At line 12 in file HA3-main.s
+   Uses
+      None
+Comment: MyCode unused
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 18 in file HA3-main.s
+   Uses
+      At line 10 in file HA3-main.s
+Comment: main used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Five 00000005
+
+Symbol: Five
+   Definitions
+      At line 35 in file HA3-main.s
+   Uses
+      At line 40 in file HA3-main.s
+Comment: Five used once
+1 symbol
+339 symbols in table
